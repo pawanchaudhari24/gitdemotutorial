@@ -9,4 +9,10 @@ function saveToLocalStorage(event){
         phonenumber
     }
     localStorage.setItem('userdetails',JSON.stringify (obj));
+    showUserOnScreen(obj)
+    function showUserOnScreen(obj){
+        const parentElem = document.getElementById('listOfitems')
+
+        parentElem.innerHTML = '<li>$(obj.name) - $(obj.email) - $(obj.phonenumber) </li>'
+    }
 }
