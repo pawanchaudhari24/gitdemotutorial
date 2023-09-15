@@ -13,6 +13,19 @@ function saveToLocalStorage(event){
     function showUserOnScreen(obj){
         const parentElem = document.getElementById('listOfitems')
 
-        parentElem.innerHTML = '<li>$(obj.name) - $(obj.email) - $(obj.phonenumber) </li>'
+        const childElem = document.createElement('li')
+        childElem.textContent = obj.name + ' - '+ obj.email + ' - '+ obj.phoneNumber + ' - '
+
+               const deleteButton = document.createElement('input')
+               deleteButton.type = 'button'
+               deleteButton.value = 'Delete'
+               deleteButton.oneclick = () => {
+                localStorage.removeItem(obj.email)
+                parentElem.removeChild(childElem)
+               }
+               childElem.appendChild(deleteButton)
+               parentElem.appendChild(childElem)
+            
     }
+
 }
