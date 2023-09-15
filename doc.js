@@ -3,9 +3,10 @@ function saveToLocalStorage(event){
     const name =event.target.username.value;
     const email =event.target.emailId.value;
     const phonenumber =event.target.phoneNumber.value;
-
-
-     localStorage.setItem('name',name);
-     localStorage.setItem('email',email);
-      localStorage.setItem('phonenumber',phonenumber);
-   }
+  const obj = {
+        name,
+        email,
+        phonenumber
+    }
+    localStorage.setItem('userdetails',JSON.stringify (obj));
+}
