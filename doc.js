@@ -14,17 +14,18 @@ function saveToLocalStorage(event){
         const parentElem = document.getElementById('listOfitems')
 
         const childElem = document.createElement('li')
-        childElem.textContent = obj.name + ' - '+ obj.email + ' - '+ obj.phoneNumber + ' - '
+        childElem.textContent = obj.name + ' - '+ obj.email + ' - '+ obj.phoneNumber + ' - ';
 
                const deleteButton = document.createElement('input')
                deleteButton.type = 'button'
-               deleteButton.value = 'Delete'
+               deleteButton.value = 'Edit'
                deleteButton.oneclick = () => {
                 localStorage.removeItem(obj.email)
                 parentElem.removeChild(childElem)
                }
-               childElem.appendChild(deleteButton)
-               parentElem.appendChild(childElem)
+               childElem.appendChild(editButton);
+               childElem.appendChild(deleteButton);
+               parentElem.appendChild(childElem);
             
     }
 
