@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body Style="background-color:rgb(85, 218, 114);">
+    <h1>Booking Appointment App</h1><br>
+    <form onsubmit="saveToLocalStorage(event)">
+        <label>Name</label><br>
+        <input type="text"name="username" required/><br><br>
+        <label>EmailId</label><br>
+        <input type="email"name="emailId" required/><br><br>
+        <label>Phone number</label><br>
+        <input type="tel"name="phoneNumber" required/><br><br>
+        <label>Address</label><br>
+        <input type="text"name="address"><br> <br>         
+        <label for="country">Choose Country:</label>         
+        <select id="country" name="country">          
+            <option value="India">India</option>           
+            <option value="Pakistan">Pakistan</option>           
+            <option value="Shri lanka">Shri lanka</option>          
+            <option value="Bhutan">Bhutan</option><br>        
+            </select>        
+              <label for="Gender">Choose Gender:</label>        
+               <select id="Gender" name="Gender">             
+                <option value="Male">Male</option>            
+                 <option value="Female">Female</option> 
+            <option value="others">others</option>       
+         </select>         
+         <br><br>
+        <button> <b>Submit</b></button>
+     </form>
+     <script src="/doc.js"></script>
+</body>
+</html>
